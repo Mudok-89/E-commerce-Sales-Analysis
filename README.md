@@ -1,0 +1,2 @@
+# Shoptet_SQL_PowerBi
+case_study_shoptet
