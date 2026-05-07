@@ -25,7 +25,7 @@ One-page dashboard created in Power BI focused on:
 ## Repository Structure
 
 ├── dashboard/
-│   └── northwind_dashboard.pbix
+│   └── Šindelerová_dashboard.pbix
 │
 ├── sql/
 │   └── analytical_queries.sql
