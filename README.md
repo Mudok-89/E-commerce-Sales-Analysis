@@ -52,4 +52,12 @@ Approximately 8–9 hours in total, including:
 - Repository structure and documentation preparation
 
 ## Notes
-The dashboard and SQL queries were created manually based on the provided Northwind database.
+The dashboard was created using selected tables from the Northwind sample database.
+
+The analysis was based on selected Northwind tables such as:
+- Orders
+- OrderDetails
+- Products
+- Categories
+- Customers
+- Shippers
