@@ -24,17 +24,19 @@ One-page dashboard created in Power BI focused on:
 
 ## Repository Structure
 
+```text
 ├── dashboard/
-│   └── Šindelerová_dashboard.pbix
+│   └── Sindelerova_dashboard.pbix
 │
 ├── sql/
 │   └── analytical_queries.sql
 │
 ├── docs/
-│   ├── ER_diagram.png
-│   └── case_study_summary.pdf
+│   ├── Šindlerová_ER_diagram.png
+│   └── Šindlerová_case_study_summary_1,2,3,5.pdf
 │
 └── README.md
+```
 
 ## Tools Used
 - SQL
@@ -42,7 +44,12 @@ One-page dashboard created in Power BI focused on:
 - Excel
 
 ## Time Spent
-Approximately X hours.
+
+Approximately 8–9 hours in total, including:
+- SQL analysis and query development
+- ER diagram creation
+- Power BI dashboard design and data visualization
+- Repository structure and documentation preparation
 
 ## Notes
 The dashboard and SQL queries were created manually based on the provided Northwind database.
