@@ -1,28 +1,28 @@
-# Shoptet_SQL_PowerBi
-case_study_shoptet
-
 # Data Analyst Case Study – Shoptet
 
-This repository contains my solution for the Data Analyst case study based on the Northwind sample database.
+Tento repozitář obsahuje moje řešení case study pro pozici Data Analyst společnosti Shoptet.
 
-## Contents
+## Obsah
 
-### SQL Tasks
-Solutions for:
-1. Duplicate product name check
-2. Total order value by country
-3. Orders by shipper and category (Seafood vs Beverages)
-4. ER diagram
-5. Two custom analytical SQL queries
+### SQL úkoly
+Řešení následujících úloh:
+- kontrola duplicitních ProductName
+- celková hodnota objednávek podle zemí
+- počet objednávek podle dopravce a kategorií (Seafood vs Beverages)
+- ER diagram databáze
+- dva vlastní analytické SQL dotazy
 
 ### Power BI Dashboard
-One-page dashboard created in Power BI focused on:
-- sales trends
-- category performance
-- product analysis
-- order overview
+Jednostránkový dashboard vytvořený v Power BI zaměřený na:
+- analýzu celkových tržeb, objednávek a prodaného množství,
+- porovnání tržeb podle zemí,
+- analýzu objednávek kategorií Seafood a Beverages podle dopravce,
+- měsíční vývoj tržeb v letech 1996–1997,
+- výkon zaměstnanců podle tržeb, počtu objednávek a průměrné hodnoty objednávky,
+- práci s datovým modelem, DAX mírami a Power Query transformacemi,
+- interaktivní filtrování pomocí slicerů (datum, země, dopravce, kategorie).
 
-## Repository Structure
+## Struktura repozitáře
 
 ```text
 ├── dashboard/
@@ -32,29 +32,30 @@ One-page dashboard created in Power BI focused on:
 │   └── analytical_queries.sql
 │
 ├── docs/
-│   ├── Šindlerová_ER_diagram.png
-│   └── Šindlerová_case_study_summary_1,2,3,5.pdf
+│   ├── Sindelerova_ER_diagram.png
+│   └── Sindelerova_case_study_summary_1_2_3_5.pdf
 │
 └── README.md
 ```
 
-## Tools Used
+## Použité nástroje
 - SQL
 - Power BI
 - Excel
 
-## Time Spent
+## Čas zpracování
 
-Approximately 8–9 hours in total, including:
-- SQL analysis and query development
-- ER diagram creation
-- Power BI dashboard design and data visualization
-- Repository structure and documentation preparation
+Přibližně 8–9 hodin celkem, včetně:
+- SQL analýzy a tvorby dotazů
+- vytvoření ER diagramu
+- návrhu Power BI dashboardu a vizualizací
+- přípravy struktury repozitáře a dokumentace
 
-## Notes
-The dashboard was created using selected tables from the Northwind sample database.
+## Poznámky
 
-The analysis was based on selected Northwind tables such as:
+Dashboard byl vytvořen nad vybranými tabulkami z databáze Northwind.
+
+Analýza vycházela zejména z tabulek:
 - Orders
 - OrderDetails
 - Products
