@@ -44,7 +44,7 @@ The database is based on the Northwind sample dataset and contains the following
 - Shippers
 - Suppliers
 
-**Data source:** W3Schools Try-SQL Editor  https://www.w3schools.com/sql/trysql.asp?filename=trysql_asc&utm_source=chatgpt.com
+**Data source:** W3Schools Try-SQL Editor   https://www.w3schools.com/sql/trysql.asp?filename=trysql_asc
 
 ## Power BI Dashboard
 
