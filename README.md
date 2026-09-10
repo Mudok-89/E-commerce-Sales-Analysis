@@ -102,9 +102,11 @@ The dataset does not contain the historical product price at the time of each or
 
 ```text
 ├── SQL/
+│   ├── README.md
 │   └── analytical_queries.sql
 │
 ├── dashboard/
+│   ├── README.md
 │   ├── Sales_Performance_Dashboard.pbix
 │   └── Sales_Performance_Dashboard.JPG
 │
