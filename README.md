@@ -1,28 +1,102 @@
-# E-commerce Sales Analysis Case Study 
+# E-commerce Sales Analysis
 
-Tento repozitář obsahuje moje řešení case study pro pozici Data Analyst společnosti Shoptet.
+Portfolio data analytics project focused on sales performance analysis using SQL and Power BI.
 
-## Obsah
+The project is based on the Northwind sample database and was originally created as a Data Analyst case study. It was later refactored based on review feedback with a focus on SQL readability, consistent naming, data validation and clearer business purpose of the Power BI dashboard.
 
-### SQL úkoly
-Řešení následujících úloh:
-- kontrola duplicitních ProductName
-- celková hodnota objednávek podle zemí
-- počet objednávek podle dopravce a kategorií (Seafood vs Beverages)
-- ER diagram databáze
-- dva vlastní analytické SQL dotazy
+## Project Objectives
 
-### Power BI Dashboard
-Jednostránkový dashboard vytvořený v Power BI zaměřený na:
-- analýzu celkových tržeb, objednávek a prodaného množství,
-- porovnání tržeb podle zemí,
-- analýzu objednávek kategorií Seafood a Beverages podle dopravce,
-- měsíční vývoj tržeb v letech 1996–1997,
-- výkon zaměstnanců podle tržeb, počtu objednávek a průměrné hodnoty objednávky,
-- práci s datovým modelem, DAX mírami a Power Query transformacemi,
-- interaktivní filtrování pomocí slicerů (datum, země, dopravce, kategorie).
+The goal of the project is to demonstrate the ability to:
 
-## Struktura repozitáře
+- analyze relational data using SQL,
+- understand data relationships and granularity,
+- validate analytical results,
+- create business-oriented metrics,
+- build an interactive Power BI dashboard,
+- translate data into clear business insights.
+
+## SQL Analysis
+
+The SQL part includes:
+
+- duplicate ProductName validation,
+- total sales analysis by country,
+- order analysis by shipper and product category,
+- employee sales performance analysis,
+- product category performance analysis.
+
+The queries use explicit JOIN conditions, table aliases and consistent English naming to improve readability.
+
+Special attention is paid to data granularity. For example, DISTINCT is used when counting orders from OrderDetails to avoid counting multiple order lines as separate orders.
+
+## Data Model
+
+The analysis uses the following Northwind tables:
+
+- Customers
+- Orders
+- OrderDetails
+- Products
+- Categories
+- Employees
+- Shippers
+- Suppliers
+
+An ER diagram is included to document the relationships between the tables.
+
+## Power BI Dashboard
+
+The Power BI report is designed as a one-page **Sales Performance Dashboard** for a Sales / Commercial Manager.
+
+The dashboard answers four main business questions:
+
+- What is the overall sales performance?
+- Which countries generate the most sales?
+- How are sales developing over time?
+- How are individual employees performing?
+
+### Key Metrics
+
+- Total Sales
+- Orders
+- Average Order Value
+- Units Sold
+
+### Visualizations
+
+- Sales by Country
+- Monthly Sales Trend
+- Employee Performance
+
+The dashboard supports interactive filtering by:
+
+- Date
+- Country
+- Category
+
+All relevant KPIs and visualizations respond to the selected filter context.
+
+## Data Coverage and Limitations
+
+The available order data covers the period from **July 1996 to February 1997**.
+
+Therefore, 1997 represents only a partial year and should not be interpreted as full-year performance.
+
+Sales are calculated as:
+
+`Quantity × Product Price`
+
+The dataset does not contain the historical product price at the time of each order. Therefore, the analysis assumes that the price stored in the Products table can be used for the sales calculation.
+
+## Tools
+
+- SQL
+- Power BI
+- DAX
+- Power Query
+- Excel
+
+## Repository Structure
 
 ```text
 ├── dashboard/
@@ -32,33 +106,126 @@ Jednostránkový dashboard vytvořený v Power BI zaměřený na:
 │   └── analytical_queries.sql
 │
 ├── docs/
-│   ├── Sindelerova_ER_diagram.png
-│   └── Sindelerova_case_study_summary_1_2_3_5.pdf
-│
-└── README.md
-```
+│   
+│   # E-commerce Sales Analysis
 
-## Použité nástroje
-- SQL
-- Power BI
-- Excel
+Portfolio data analytics project focused on sales performance analysis using SQL and Power BI.
 
-## Čas zpracování
+The project is based on the Northwind sample database and was originally created as a Data Analyst case study. It was later refactored based on review feedback with a focus on SQL readability, consistent naming, data validation and clearer business purpose of the Power BI dashboard.
 
-Přibližně 8–9 hodin celkem, včetně:
-- SQL analýzy a tvorby dotazů
-- vytvoření ER diagramu
-- návrhu Power BI dashboardu a vizualizací
-- přípravy struktury repozitáře a dokumentace
+## Project Objectives
 
-## Poznámky
+The goal of the project is to demonstrate the ability to:
 
-Dashboard byl vytvořen nad vybranými tabulkami z databáze Northwind.
+- analyze relational data using SQL,
+- understand data relationships and granularity,
+- validate analytical results,
+- create business-oriented metrics,
+- build an interactive Power BI dashboard,
+- translate data into clear business insights.
 
-Analýza vycházela zejména z tabulek:
+## SQL Analysis
+
+The SQL part includes:
+
+- duplicate ProductName validation,
+- total sales analysis by country,
+- order analysis by shipper and product category,
+- employee sales performance analysis,
+- product category performance analysis.
+
+The queries use explicit JOIN conditions, table aliases and consistent English naming to improve readability.
+
+Special attention is paid to data granularity. For example, DISTINCT is used when counting orders from OrderDetails to avoid counting multiple order lines as separate orders.
+
+## Data Model
+
+The analysis uses the following Northwind tables:
+
+- Customers
 - Orders
 - OrderDetails
 - Products
 - Categories
-- Customers
+- Employees
 - Shippers
+- Suppliers
+
+An ER diagram is included to document the relationships between the tables.
+
+## Power BI Dashboard
+
+The Power BI report is designed as a one-page **Sales Performance Dashboard** for a Sales / Commercial Manager.
+
+The dashboard answers four main business questions:
+
+- What is the overall sales performance?
+- Which countries generate the most sales?
+- How are sales developing over time?
+- How are individual employees performing?
+
+### Key Metrics
+
+- Total Sales
+- Orders
+- Average Order Value
+- Units Sold
+
+### Visualizations
+
+- Sales by Country
+- Monthly Sales Trend
+- Employee Performance
+
+The dashboard supports interactive filtering by:
+
+- Date
+- Country
+- Category
+
+All relevant KPIs and visualizations respond to the selected filter context.
+
+## Data Coverage and Limitations
+
+The available order data covers the period from **July 1996 to February 1997**.
+
+Therefore, 1997 represents only a partial year and should not be interpreted as full-year performance.
+
+Sales are calculated as:
+
+`Quantity × Product Price`
+
+The dataset does not contain the historical product price at the time of each order. Therefore, the analysis assumes that the price stored in the Products table can be used for the sales calculation.
+
+## Tools
+
+- SQL
+- Power BI
+- DAX
+- Power Query
+- Excel
+
+## Repository Structure
+
+```text
+├── SQL/
+│   └── analytical_queries.sql
+│
+├── dashboard/
+│   ├── Sales_Performance_Dashboard.pbix
+│   └── Sales_Performance_Dashboard.JPG
+│
+├── docs/
+│   ├── Categories.xlsx
+│   ├── Customers.xlsx
+│   ├── Employees.xlsx
+│   ├── OrderDetails.xlsx
+│   ├── Orders.xlsx
+│   ├── Products.xlsx
+│   ├── Shippers.xlsx
+│   ├── Suppliers.xlsx
+│   └── readme.md
+│
+├── Data Analyst Case Study
+├── LICENSE
+└── README.md
