@@ -1,0 +1,43 @@
+# E-commerce Sales Analysis Case Study
+
+## Instructions
+
+- You can find the practice SQL database at the following link:  
+  https://www.w3schools.com/sql/trysql.asp?filename=trysql_asc
+
+- Complete the tasks below and paste your SQL queries directly under each question.  
+  Code readability will also be evaluated.
+
+- We are not timing the assignment. However, please let us know approximately how much time you spent on it.
+
+- Please avoid using AI tools while completing the assignment. During the interview, we will discuss the specific decisions you made in your solution.
+
+## Tasks
+
+### 1.
+Write an SQL query to check whether there are any records in the `Products` table with the same `ProductName`.
+
+### 2.
+Write an SQL query to calculate the total order value for each country (`Country`).
+
+Select only those countries where the total order value is greater than 100 and sort the results by total order value.
+
+### 3.
+Write an SQL query to calculate, for each shipper (`ShipperName`), separately:
+
+- the number of orders containing products from the `Seafood` category,
+- the number of orders containing products from the `Beverages` category.
+
+Limit the orders to the year 1997.
+
+### 4.
+Create an ER diagram of the database.
+
+### 5.
+Create two SQL queries of your choice that show an interesting perspective on the data.
+
+Briefly comment on the results.
+
+### 6.
+Create a simple one-page Power BI dashboard based on the data from this database.
+The data can be imported manually, for example from Excel.
