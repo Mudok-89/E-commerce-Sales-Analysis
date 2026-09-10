@@ -29,9 +29,11 @@ The queries use explicit JOIN conditions, table aliases and consistent English n
 
 Special attention is paid to data granularity. For example, DISTINCT is used when counting orders from OrderDetails to avoid counting multiple order lines as separate orders.
 
-## Data Model
+## Dataset
 
-The analysis uses the following Northwind tables:
+The project uses the sample SQL database available in the W3Schools Try-SQL environment.
+
+The database is based on the Northwind sample dataset and contains the following tables:
 
 - Customers
 - Orders
@@ -42,7 +44,7 @@ The analysis uses the following Northwind tables:
 - Shippers
 - Suppliers
 
-An ER diagram is included to document the relationships between the tables.
+**Data source:** W3Schools Try-SQL Editor  https://www.w3schools.com/sql/trysql.asp?filename=trysql_asc&utm_source=chatgpt.com
 
 ## Power BI Dashboard
 
