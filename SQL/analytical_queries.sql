@@ -1,22 +1,45 @@
--- 1.	Napište SQL dotaz, kterým ověříte, zda jsou v tabulce Products nějaké záznamy se stejným ProductName. (3 body) 
+-- =====================================================
+-- Task 1
+-- Check whether the Products table contains duplicate
+-- ProductName values.
+-- =====================================================
+-- CZ 1.Napište SQL dotaz, kterým ověříte, 
+-- zda jsou v tabulce Products nějaké záznamy se stejným ProductName.  
 
-SELECT 
- 	p.ProductName,
- 	COUNT(*) AS  DuplicateCount
+-- EN 1. Write an SQL query to check whether there are any records
+-- in the Products table with the same ProductName.
+
+SELECT
+    p.ProductName,
+    COUNT(*) AS DuplicateCount
 FROM Products AS p
-GROUP BY ProductName    -- seskupí řádky podle názvu produktu
-HAVING COUNT(*) > 1;        -- nechá jen ty názvy, které se opakují(duplicity)
+GROUP BY
+    p.ProductName
+HAVING COUNT(*) > 1;
 
--- Nejsou žádné duplicitní záznamy se stejným ProductName
+-- Result:
+-- No duplicate ProductName values were found.
+
+--CZ:  Nejsou žádné duplicitní záznamy se stejným ProductName
 
 
+-- =====================================================
+-- Task 2
+-- Calculate total order value for each country.
+-- Return only countries with total order value > 100
+-- and sort them by total order value.
+-- =====================================================
 
- 
--- 2.	Napište SQL dotaz, kterým pro každou zemi (Country) spočítejte celkovou cenu objednávek. Vyberte ty země, kde celková cena je větší než 100 a seřaďte je podle celkové ceny. (5 bodů) 
+-- CZ 2. Napište SQL dotaz, kterým pro každou zemi (Country) spočítejte celkovou cenu objednávek.
+-- Vyberte ty země, kde celková cena je větší než 100 a seřaďte je podle celkové ceny.
+
+-- EN 2. Write an SQL query to calculate the total order value for each country (Country).
+-- Select the countries where the total order value is greater than 100
+-- and sort them by total order value.
 
 SELECT 
 	c.Country,
-	SUM(od.Quantity * p.Price) AS TotalOrderPrice 
+	SUM(od.Quantity * p.Price) AS TotalOrderValue 
 FROM Customers AS c
 INNER JOIN Orders  AS o
     ON c.CustomerID = o.CustomerID
@@ -30,10 +53,21 @@ HAVING
 ORDER BY TotalOrderPrice DESC;
 
 
+-- =====================================================
+-- Task 3
+-- For each shipper, calculate separately the number
+-- of orders containing Seafood products and the number
+-- of orders containing Beverages products.
+-- Limit the analysis to 1997.
+-- =====================================================
 
+-- CZ 3.	Napište SQL dotaz, kterým pro každého dopravce (ShipperName) spočítejte zvlášt počet objednávek na produkty kategorie “Seafood” a 
+-- počet objednávek na produkty kategorie “Beverages”. Objednávky omezte na rok 1997. 
 
--- 3.	Napište SQL dotaz, kterým pro každého dopravce (ShipperName) spočítejte zvlášt počet objednávek na produkty kategorie “Seafood” a počet objednávek na produkty kategorie “Beverages”. Objednávky omezte na rok 1997. (5 bodů) 
-
+-- EN 3. Write an SQL query to calculate, for each shipper (ShipperName),
+-- separately the number of orders containing products from the "Seafood" category
+-- and the number of orders containing products from the "Beverages" category.
+-- Limit the orders to the year 1997.
 
 SELECT
  	s.ShipperName,
@@ -66,10 +100,25 @@ GROUP BY
 ORDER BY 
 	s.ShipperName;
 
---Je nutné použít DISTINCT, protože jedna objednávka může mít více řádků v OrderDetails. U dopravce Speedy Express by v kategorii SeafoodOrders vycházel počet objednávek 7 místo 5ti.
+-- ENG: 
+-- DISTINCT is required because one order can contain
+-- multiple OrderDetails rows from the same category.
+-- Without DISTINCT, the query would count order lines
+-- rather than unique orders.
+
+-- CZ: 
+-- Je nutné použít DISTINCT, protože jedna objednávka může mít více řádků v OrderDetails. 
+-- U dopravce Speedy Express by v kategorii SeafoodOrders vycházel počet objednávek 7 místo 5ti.
 -- Bez DISTINCT bychom počítali spíš počet položek objednávek, ne skutečný počet objednávek. 
 
--- 5a) Kteří zaměstnanci v roce 1997 vygenerovali nejvyšší tržby, největší počet objednávek a jaká byla průměrná hodnota objednávky?
+
+-- =====================================================
+-- Task 5a
+-- Employee performance in 1997:
+-- total sales, number of orders and average order value.
+-- =====================================================
+-- CZ: 5a) Kteří zaměstnanci v roce 1997 vygenerovali nejvyšší tržby, největší počet objednávek a jaká byla průměrná hodnota objednávky?
+-- ENG: Which employees generated the highest sales in 1997, how many orders did they handle, and what was their average order value?
 
 WITH OrderValues AS (
     SELECT
@@ -106,8 +155,14 @@ ORDER BY
     TotalSales DESC;
 
 
+-- =====================================================
+-- Task 5b
+-- Product category performance in 1997:
+-- number of orders, units sold and total sales.
+-- =====================================================
+--CZ: 5b) Které produktové kategorie mají nejvyšší tržby a kolik kusů se v nich prodalo?
+--ENG: Which product categories generated the highest sales, and how many units were sold in each category?
 
--- 5b) Které produktové kategorie mají nejvyšší tržby a kolik kusů se v nich prodalo?
 
 SELECT
     	 c.CategoryName,
