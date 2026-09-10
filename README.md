@@ -1,4 +1,4 @@
-# Data Analyst Case Study – Shoptet
+# E-commerce Sales Analysis Case Study 
 
 Tento repozitář obsahuje moje řešení case study pro pozici Data Analyst společnosti Shoptet.
 
