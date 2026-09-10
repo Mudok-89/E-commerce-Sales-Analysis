@@ -39,7 +39,7 @@ HAVING COUNT(*) > 1;
 
 SELECT 
 	c.Country,
-	SUM(od.Quantity * p.Price) AS TotalOrderValue 
+	SUM(od.Quantity * p.Price) AS 'TotalOrderValue' 
 FROM Customers AS c
 INNER JOIN Orders  AS o
     ON c.CustomerID = o.CustomerID
@@ -50,7 +50,7 @@ INNER JOIN Products AS p
 GROUP BY Country
 HAVING 
      SUM(od.Quantity * p.Price) > 100
-ORDER BY TotalOrderPrice DESC;
+ORDER BY TotalOrderValue DESC;
 
 
 -- =====================================================
